@@ -1,0 +1,38 @@
+import fs from "fs";
+import readline from "readline";
+
+const fileStream = fs.createReadStream("input.txt");
+
+const processFile = async () => {
+  const rl = readline.createInterface({
+    input: fileStream,
+    crlfDelay: Infinity,
+  });
+  // Note: we use the crlfDelay option to recognize all instances of CR LF
+  // ('\r\n') in input.txt as a single line break.
+  let depth = 0;
+  let distance = 0;
+  let aim = 0;
+
+  for await (const line of rl) {
+    let [direction, dist] = line.split(" ");
+    dist = parseInt(dist);
+    console.log(direction);
+    console.log(dist);
+    switch (direction) {
+      case "up":
+        aim -= dist;
+        break;
+      case "down":
+        aim += dist;
+        break;
+      case "forward":
+        distance += dist;
+        depth += (dist * aim);
+    }
+  }
+  return depth*distance;
+};
+
+const count = await processFile();
+console.log(count);
