@@ -38,14 +38,17 @@ const calculateSolution = (parsedInput) => {
   let startNode = parsedInput["start"];
   let found = [];
   let count = paths(startNode, [], false, [], found);
-  console.log(found);
   return count;
 };
 
 const paths = (currentNode, visitedNodes, smallTwice, allVisitedNodes, found) => {
   let count = 0;
+  if (visitedNodes.length - new Set(visitedNodes).size > 1){
+    console.log(allVisitedNodes);
+    return 0;
+  }
   if (currentNode.name == "end") {
-    found.push([...allVisitedNodes, 'end'].join(","));
+    found.push([...allVisitedNodes, 'end']);
     return 1;
   }
   for (let neighbor of currentNode.neighbors) {
