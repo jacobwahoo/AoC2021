@@ -5,12 +5,14 @@ import day11_1 from "./solutions/day11_1/index.js";
 import day11_2 from "./solutions/day11_2/index.js";
 import day12_1 from "./solutions/day12_1/index.js";
 import day12_2 from "./solutions/day12_2/index.js";
+import day13_1 from "./solutions/day13_1/index.js";
+import day13_2 from "./solutions/day13_2/index.js";
 var args = process.argv.slice(2);
 if (args[0] === "--inspect") {
   args = args.slice(1);
 }
 
-let solutions = { day10_1, day10_2, day11_1, day11_2, day12_1, day12_2 };
+let solutions = { day10_1, day10_2, day11_1, day11_2, day12_1, day12_2, day13_1, day13_2 };
 
 if (args[1] == "test") {
   var file = `./solutions/${args[0]}/test-input.txt`;
