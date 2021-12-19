@@ -13,6 +13,11 @@ import day15_1 from "./solutions/day15_1/index.js";
 import day15_2 from "./solutions/day15_2/index.js";
 import day16_1 from "./solutions/day16_1/index.js";
 import day16_2 from "./solutions/day16_2/index.js";
+import day17_1 from "./solutions/day17_1/index.js";
+import day17_2 from "./solutions/day17_2/index.js";
+import day18_1 from "./solutions/day18_1/index.js";
+import day18_2 from "./solutions/day18_2/index.js";
+
 var args = process.argv.slice(2);
 if (args[0] === "--inspect") {
   args = args.slice(1);
@@ -32,7 +37,11 @@ let solutions = {
   day15_1,
   day15_2,
   day16_1,
-  day16_2
+  day16_2,
+  day17_1,
+  day17_2,
+  day18_1,
+  day18_2,
 };
 
 if (args[1] == "test") {
