@@ -1,4 +1,5 @@
 import { fileLoader } from "./fileloader.js";
+import { millisToHours } from "./DateUtil.js";
 import day10_1 from "./solutions/day10_1/index.js";
 import day10_2 from "./solutions/day10_2/index.js";
 import day11_1 from "./solutions/day11_1/index.js";
@@ -17,6 +18,10 @@ import day17_1 from "./solutions/day17_1/index.js";
 import day17_2 from "./solutions/day17_2/index.js";
 import day18_1 from "./solutions/day18_1/index.js";
 import day18_2 from "./solutions/day18_2/index.js";
+import day19_1 from "./solutions/day19_1/index.js";
+import day19_2 from "./solutions/day19_2/index.js";
+import day20_1 from "./solutions/day20_1/index.js";
+import day20_2 from "./solutions/day20_2/index.js";
 
 var args = process.argv.slice(2);
 if (args[0] === "--inspect") {
@@ -42,7 +47,13 @@ let solutions = {
   day17_2,
   day18_1,
   day18_2,
+  day19_1,
+  day19_2,
+  day20_1,
+  day20_2,
 };
+
+let start = new Date();
 
 if (args[1] == "test") {
   var file = `./solutions/${args[0]}/test-input.txt`;
@@ -51,4 +62,6 @@ if (args[1] == "test") {
 }
 
 let sol = solutions[args[0]].solve(fileLoader.loadFile(file));
+let end = new Date();
 console.log(sol);
+console.log(`Time to Complete: ${(millisToHours(end-start))}`);
