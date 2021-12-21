@@ -22,11 +22,10 @@ import day19_1 from "./solutions/day19_1/index.js";
 import day19_2 from "./solutions/day19_2/index.js";
 import day20_1 from "./solutions/day20_1/index.js";
 import day20_2 from "./solutions/day20_2/index.js";
+import day21_1 from "./solutions/day21_1/index.js";
+import day21_2 from "./solutions/day21_2/index.js";
 
 var args = process.argv.slice(2);
-if (args[0] === "--inspect") {
-  args = args.slice(1);
-}
 
 let solutions = {
   day10_1,
@@ -51,6 +50,8 @@ let solutions = {
   day19_2,
   day20_1,
   day20_2,
+  day21_1,
+  day21_2,
 };
 
 let start = new Date();
