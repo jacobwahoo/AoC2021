@@ -24,6 +24,8 @@ import day20_1 from "./solutions/day20_1/index.js";
 import day20_2 from "./solutions/day20_2/index.js";
 import day21_1 from "./solutions/day21_1/index.js";
 import day21_2 from "./solutions/day21_2/index.js";
+import day22_1 from "./solutions/day22_1/index.js";
+import day22_2 from "./solutions/day22_2/index.js";
 
 var args = process.argv.slice(2);
 
@@ -52,6 +54,8 @@ let solutions = {
   day20_2,
   day21_1,
   day21_2,
+  day22_1,
+  day22_2,
 };
 
 let start = new Date();
