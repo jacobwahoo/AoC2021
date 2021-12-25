@@ -26,6 +26,12 @@ import day21_1 from "./solutions/day21_1/index.js";
 import day21_2 from "./solutions/day21_2/index.js";
 import day22_1 from "./solutions/day22_1/index.js";
 import day22_2 from "./solutions/day22_2/index.js";
+import day23_1 from "./solutions/day23_1/index.js";
+import day23_2 from "./solutions/day23_2/index.js";
+import day24_1 from "./solutions/day24_1/index.js";
+import day24_2 from "./solutions/day24_2/index.js";
+import day25_1 from "./solutions/day25_1/index.js";
+import day25_2 from "./solutions/day25_2/index.js";
 
 var args = process.argv.slice(2);
 
@@ -56,6 +62,12 @@ let solutions = {
   day21_2,
   day22_1,
   day22_2,
+  day23_1,
+  day23_2,
+  day24_1,
+  day24_2,
+  day25_1,
+  day25_2,
 };
 
 let start = new Date();
